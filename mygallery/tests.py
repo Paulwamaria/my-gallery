@@ -23,6 +23,30 @@ class TestImagePost(TestCase):
         self.new_image.save_imagepost()
         self.assertTrue(isinstance(self.new_image, ImagePost))
 
+
+    def test_save_imagepost(self):
+        images = ImagePost.objects.all()
+        self.assertTrue(len(images)>0)
+
+
+    def test_delete_imagepost(self):
+      
+        self.new_image.delete_imagepost()
+        images = ImagePost.objects.all()
+        self.assertTrue(len(images)==0)
+
+    def test_get_image_by_id(self):
+        image = ImagePost.get_image_by_id(id=2)
+        self.assertTrue(self.new_image == image)
+
+    def test_search_image(cls):
+        images = ImagePost.search_image(5)
+        cls.assertTrue(len(images)==1)
+        
+
+
+
+
     def tearDown(self):
         ImageLocation.objects.all().delete()
         ImageCategory.objects.all().delete()

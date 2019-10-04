@@ -34,3 +34,16 @@ class ImagePost(models.Model):
 
     def save_imagepost(self):
         self.save()
+
+    def delete_imagepost(self):
+        self.delete()
+
+    
+    def get_image_by_id(id):
+        image = ImagePost.objects.get(pk=id)
+        return image
+
+    @classmethod
+    def search_image(cls,category_name):
+        images = cls.objects.filter(image_category=category_name)
+        return images
