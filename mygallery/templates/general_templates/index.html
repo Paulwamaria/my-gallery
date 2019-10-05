@@ -7,8 +7,8 @@
 {% for post in posts %}
 
 <h2>{{post.image_name}}</h2>
-<img src="../../../{{post.my_image.url}}" alt="Image">
-<p>{{post.my_image.url}}</p>
+<img src="{{post.my_image.url}}" alt="Image">
+
 <p>{{post.image_description}}</p>
 
 {% endfor %}

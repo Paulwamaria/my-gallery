@@ -25,7 +25,7 @@ class ImageLocation(models.Model):
 
 class ImagePost(models.Model):
     my_image = models.ImageField(
-        upload_to='allImage/', default='allImage/default.jpg')
+        upload_to='album/', default='album/default.jpg')
     image_name = models.CharField(max_length=60)
     image_description = models.TextField()
     created_on = models.DateTimeField(auto_now=True)
