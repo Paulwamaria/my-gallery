@@ -40,7 +40,11 @@ class TestImagePost(TestCase):
         self.assertTrue(self.new_image == image)
 
     def test_search_image(cls):
-        images = ImagePost.search_image(5)
+        images = ImagePost.search_image('nature')
+        cls.assertTrue(len(images)==1)
+
+    def test_search_by_location(cls):
+        images = ImagePost.search_by_location('Aboretum')
         cls.assertTrue(len(images)==1)
         
 
