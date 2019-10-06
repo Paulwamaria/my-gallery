@@ -1,5 +1,5 @@
 body {
-    background-color: white;
+    background-image:radial-gradient(circle,rgb(221, 221, 238),rgb(0, 183, 255));
 }
 
 #imag {
@@ -84,6 +84,9 @@ body {
     position: relative;
     top: 20px;
     background-color:rgba(0, 0, 0, 0.5);
-    width:20%;
+    width:25%;
     margin-left:10%;
+}
+.nv{
+    background-image:radial-gradient(circle,rgb(69, 69, 139),#000);
 }

@@ -35,6 +35,9 @@ class ImagePost(models.Model):
         'ImageCategory', on_delete=models.CASCADE)
     image_location = models.ForeignKey(ImageLocation, on_delete=models.CASCADE)
 
+    class Meta:
+        ordering = ['-created_on']
+
     def __str__(self):
         return self.image_name
 
