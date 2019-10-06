@@ -1,4 +1,6 @@
+import datetime
 from django.db import models
+from django.utils import timezone
 
 # Create your models here.
 
@@ -45,6 +47,9 @@ class ImagePost(models.Model):
     def get_image_by_id(id):
         image = ImagePost.objects.get(pk=id)
         return image
+
+    def recently_uploaded(self):
+        return self.created_on >= timezone.now() + datetime.timedelta(days=1)
 
     @classmethod
     def search_image(cls, search_term):
