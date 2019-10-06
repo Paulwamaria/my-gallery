@@ -57,7 +57,7 @@ def aboretum_images(request):
     context = {
         "posts":images
     }
-    return render(request, 'general_templates/aboretum.html', context)
+    return render(request, 'general_templates/display.html', context)
 
 def nature_images(request):
     images=ImagePost.objects.filter(image_location__name="Nature")
@@ -65,5 +65,48 @@ def nature_images(request):
     context = {
         "posts":images
     }
-    return render(request, 'general_templates/nature.html', context)
+    return render(request, 'general_templates/display.html', context)
+
+
+
+def park_images(request):
+    images=ImagePost.objects.filter(image_location__name="National Park")
+
+    context = {
+        "posts":images
+    }
+    return render(request, 'general_templates/display.html', context)
+
+def beach_images(request):
+    images=ImagePost.objects.filter(image_location__name="beach")
+
+    context = {
+        "posts":images
+    }
+    return render(request, 'general_templates/display.html', context)
+
+def cgi_images(request):
+    images=ImagePost.objects.filter(image_location__name="CGI")
+
+    context = {
+        "posts":images
+    }
+    return render(request, 'general_templates/display.html', context)
+
+
+def unknown_images(request):
+    images=ImagePost.objects.filter(image_location__name="Unknown")
+
+    context = {
+        "posts":images
+    }
+    return render(request, 'general_templates/display.html', context)
+
+
+
+
+
+
+
+
 
