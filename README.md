@@ -21,8 +21,12 @@ Paul Kamau Wamaria
 
 ## Technology
 
-* python3.6
-* Django
+* python3.6 as the primary language
+* Django as the python framework
+* HTML for content
+* CSS and Bootstrap3 for styling
+* Javascript 
+
 
 
 ## specs
@@ -32,10 +36,11 @@ Paul Kamau Wamaria
 
 ## Installation 
 
+* Create a virtual environmet
 * Clone the repo from this link 
 * Install python3.6
-* Install the requirements as per the requirements.txt
-* 
+* Install the dependencies using this command: ** pip install -r requirements.txt
+* Run the server using the command: ** python manage.py runserver
 
  
 
@@ -47,3 +52,6 @@ Paul Kamau Wamaria
 * Phone: 0780404626
 
 ## copyright
+MIT License
+
+[Copyright (c) 2019 Paulwamaria](LICENSE)
